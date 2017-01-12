@@ -4,7 +4,9 @@ import ProjectImage from "./projectimage";
 
 export default class Projects {
     public static projects : Project[] = [
-        new Project("OpenCL Equalizer", "/images/openclequalizer/1.png", "test", [
+        new Project("OpenCL Audio Equalizer", "/images/openclequalizer/1.png", 
+        "Audio equalizer using OpenCL implementing twelve 1000 order FIR filters running in real-time in the GPU. <a href='https://github.com/bngreen/OpenCL-Equalizer'><i class='fa fa-github-square fa-3x' aria-hidden='true'></i></a>",
+         [
             new ProjectImage("/images/openclequalizer/1.png"),
             new ProjectAudio(
                 "/audio/oclequalizer/Seeing-The-Future-by-Dexter-Britain.mp3", 
