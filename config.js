@@ -206,6 +206,43 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
+  depCache: {
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework"
+    ],
+    "users.js": [
+      "aurelia-framework",
+      "aurelia-fetch-client",
+      "fetch"
+    ],
+    "welcome.js": [
+      "./project/projectaudio",
+      "./project/projects"
+    ]
+  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
@@ -215,6 +252,19 @@ System.config({
       "child-router.js",
       "main.js",
       "nav-bar.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/project.js",
+      "project/projectaudio.js",
+      "project/projectaudiovm.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/projectaudiovm.js",
+      "project/projectdetailsvm.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/projectdetailsvm.js",
+      "project/projectimage.js",
+      "project/projectimagevm.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/projectimagevm.js",
+      "project/projectobject.js",
+      "project/projects.js",
+      "project/projectvm.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/projectvm.js",
       "users.html!github:systemjs/plugin-text@0.0.8.js",
       "users.js",
       "welcome.html!github:systemjs/plugin-text@0.0.8.js",
@@ -311,19 +361,6 @@ System.config({
       "npm:aurelia-templating@1.1.1/aurelia-templating.js",
       "npm:jquery@2.2.4.js",
       "npm:jquery@2.2.4/dist/jquery.js"
-    ]
-  },
-  depCache: {
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "users.js": [
-      "aurelia-framework",
-      "aurelia-fetch-client",
-      "fetch"
     ]
   }
 });

@@ -1,0 +1,9 @@
+<template>
+    <h2>${project.title}</h2>
+    <div if.bind="currentobjind != -1">
+        <compose view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
+        <button if.bind="hasObjControls()" click.delegate="previous()">previous</button>
+        <button if.bind="hasObjControls()" click.delegate="next()">next</button>
+    </div>
+    <p>${project.description}</p>
+</template>

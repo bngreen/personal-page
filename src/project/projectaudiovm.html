@@ -1,0 +1,8 @@
+<template>
+    <h2><a href.bind="audio.url">${audio.title}</a></h2>
+    <audio controls>
+    <source src.bind="audio.audio" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <p>${audio.description}</p>
+</template>
