@@ -1,12 +1,18 @@
 import Project from "./project";
 import ProjectObject from "./projectobject";
-import {bindable} from "aurelia-framework";
+import {bindable, inject} from "aurelia-framework";
+import {DialogController} from 'aurelia-dialog';
 
+@inject(DialogController)
 export class projectdetailsvm {
+
+    constructor(controller) {
+        controller.settings.lock = false;
+    }
+
     @bindable public project : Project;
     @bindable public currentobjind : number = -1;
     activate(model) {
-        console.log(model);
         this.project = model;
         if(this.project.objects !== undefined && this.project.objects.length != 0)
             this.currentobjind = 0;
@@ -17,7 +23,6 @@ export class projectdetailsvm {
     }
 
     next(){
-        console.log("next");
         if(this.project.objects !== undefined && this.project.objects.length != 0){
             this.currentobjind = (this.currentobjind + 1) % this.project.objects.length
         }

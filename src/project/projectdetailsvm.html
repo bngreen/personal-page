@@ -1,9 +1,15 @@
 <template>
-    <h2>${project.title}</h2>
-    <div if.bind="currentobjind != -1">
-        <compose view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
-        <button if.bind="hasObjControls()" click.delegate="previous()">previous</button>
-        <button if.bind="hasObjControls()" click.delegate="next()">next</button>
-    </div>
-    <p>${project.description}</p>
+    <ai-dialog>
+      <ai-dialog-body>
+            <h2>${project.title}</h2>
+            <div if.bind="currentobjind != -1">
+                <compose view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
+                
+                <button if.bind="hasObjControls()" click.delegate="previous()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <button if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+            </div>
+            <div innerhtml.bind="project.description"></div>
+            <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
+          </ai-dialog-body>
+   </ai-dialog>
 </template>
