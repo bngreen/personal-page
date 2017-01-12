@@ -213,6 +213,45 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
+  depCache: {
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "users.js": [
+      "aurelia-framework",
+      "aurelia-fetch-client",
+      "fetch"
+    ],
+    "welcome.js": [
+      "./project/projects"
+    ]
+  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
@@ -254,6 +293,21 @@ System.config({
       "npm:aurelia-bootstrapper@1.0.0/aurelia-bootstrapper.js",
       "npm:aurelia-dependency-injection@1.2.1.js",
       "npm:aurelia-dependency-injection@1.2.1/aurelia-dependency-injection.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog-body.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog-footer.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog-header.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/attach-focus.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/aurelia-dialog.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-configuration.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-controller.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-options.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-renderer.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-result.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-service.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/lifecycle.js",
+      "npm:aurelia-dialog@1.0.0-beta.3.0.1/renderer.js",
       "npm:aurelia-event-aggregator@1.0.0.js",
       "npm:aurelia-event-aggregator@1.0.0/aurelia-event-aggregator.js",
       "npm:aurelia-fetch-client@1.0.1.js",
@@ -331,45 +385,6 @@ System.config({
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
       "npm:jquery@2.2.4.js",
       "npm:jquery@2.2.4/dist/jquery.js"
-    ]
-  },
-  depCache: {
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "users.js": [
-      "aurelia-framework",
-      "aurelia-fetch-client",
-      "fetch"
-    ],
-    "welcome.js": [
-      "./project/projects"
     ]
   }
 });
