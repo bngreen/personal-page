@@ -46,7 +46,7 @@ gulp.task('serve-export', ['export'], function(done) {
     open: false,
     port: 9000,
     server: {
-      baseDir: ['./export'],
+      baseDir: ['./docs'],
       middleware: function(req, res, next) {
         res.setHeader('Access-Control-Allow-Origin', '*');
         next();
