@@ -1,4 +1,12 @@
 <template>
-    <h2>${project.title}</h2>
-    <img src.bind="project.mainImage" click.delegate="openDetails()"></img>
+		<div class="grid">
+			<figure class="effect-bubba" click.delegate="openDetails()">
+				<!--<i style="position:absolute;top:5px;right:5px;color:#ffffff" class="fa fa-plus-circle" aria-hidden="true"></i>-->
+				<img src.bind="project.mainImage"></img>
+				<figcaption>
+					<h2>${project.title}</h2>
+					<p><span innerhtml.bind="project.description"></span></p>
+				</figcaption>
+			</figure>
+		</div>
 </template>
