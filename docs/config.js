@@ -235,7 +235,12 @@ System.config({
     "project/projects.js": [
       "./project",
       "./projectaudio",
-      "./projectimage"
+      "./projectimage",
+      "./projectvideo"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
     ],
     "project/projectvm.js": [
       "./project",
@@ -261,6 +266,7 @@ System.config({
       "child-router.js",
       "main.js",
       "nav-bar.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/dynaview.html!github:systemjs/plugin-text@0.0.8.js",
       "project/project.js",
       "project/projectaudio.js",
       "project/projectaudiovm.html!github:systemjs/plugin-text@0.0.8.js",
@@ -272,6 +278,9 @@ System.config({
       "project/projectimagevm.js",
       "project/projectobject.js",
       "project/projects.js",
+      "project/projectvideo.js",
+      "project/projectvideovm.html!github:systemjs/plugin-text@0.0.8.js",
+      "project/projectvideovm.js",
       "project/projectvm.html!github:systemjs/plugin-text@0.0.8.js",
       "project/projectvm.js",
       "users.html!github:systemjs/plugin-text@0.0.8.js",

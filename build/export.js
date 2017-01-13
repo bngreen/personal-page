@@ -14,6 +14,7 @@ module.exports = {
     'styles/styles.css',
     'images/**',
     'audio/**',
+    'video/**',
     'CNAME'
   ],
   // this section lists any jspm packages that have

@@ -5,10 +5,10 @@
             <div if.bind="currentobjind != -1">
                 <div class="container gallery-container">
                     <button class="gallery-control" if.bind="hasObjControls()" click.delegate="previous()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                    <compose class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
+                    <compose style.bind="contentstyle()" class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
                     <button class="gallery-control" if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
                 </div>
-            <div innerhtml.bind="project.description"></div>
+            <div if.bind="project.detailsview === null" innerhtml.bind="project.description"></div>
             <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
         </ai-dialog-body>
    </ai-dialog>

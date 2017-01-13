@@ -338,19 +338,26 @@ figure.effect-bubba:hover p {
 }
 
 button.gallery-control {
-    vertical-align: -webkit-baseline-middle;
+	vertical-align: -webkit-baseline-middle;
     display: inline-block;
+    border: 0;
+    background: transparent;
+    font-size: 40px;
+    /*margin: 0 10px;*/
+    color: #356d9e;
+}
+
+button.gallery-control:hover {
+	color: #4389c6;
 }
 
 .gallery-content {
 	display: inline-block;
     vertical-align: -webkit-baseline-middle;
-    width: 95%;
-    min-height: 192px;
+    width: 90%;
     margin: 15px 0px;
 }
 
 div.gallery-container{
 	text-align: center;
 }
-
