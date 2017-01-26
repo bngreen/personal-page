@@ -213,50 +213,6 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
-  depCache: {
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "users.js": [
-      "aurelia-framework",
-      "aurelia-fetch-client",
-      "fetch"
-    ],
-    "welcome.js": [
-      "./project/projects"
-    ]
-  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
@@ -394,6 +350,50 @@ System.config({
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
       "npm:jquery@2.2.4.js",
       "npm:jquery@2.2.4/dist/jquery.js"
+    ]
+  },
+  depCache: {
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "users.js": [
+      "aurelia-framework",
+      "aurelia-fetch-client",
+      "fetch"
+    ],
+    "welcome.js": [
+      "./project/projects"
     ]
   }
 });

@@ -19,6 +19,7 @@ import Project from "./project";
 import ProjectAudio from "./projectaudio";
 import ProjectImage from "./projectimage";
 import ProjectVideo from "./projectvideo";
+import Technologies from './technologies';
 
 export default class Projects {
     public static projects : Project[] = [
@@ -36,13 +37,23 @@ export default class Projects {
             new ProjectImage("/images/dyna/11.png"),
             new ProjectImage("/images/dyna/fig3a.png"),
         ],
-        "./dynaview.html",null,"640px"
-        
+        null,
+        null,"640px",
+        [
+            Technologies.CSharp,
+            Technologies.FSharp,
+            Technologies.C,
+            Technologies.WPF,
+            Technologies.NHibernate,
+            Technologies.FsLex,
+            Technologies.FsYacc,
+            Technologies.LPC2378,
+        ],
+        "The software monitored a hydraulic dynamometer and various other sensors relating to engine performance. After capture, the readings were stored in a database for later export and analysis. In addition to the software, I developed the prototype hardware to interface with the dynamometer and thermometer as a proof of concept. C# was used as the main language for software development, WPF was used for the interface. NHibernate was used for database access and RS232 was used for the hardware communication protocol. In order to generate reports, I wrote a custom parser with F#, FsLex and FsYacc. The report generator supported a wide variety of user-supplied expressions to be used in reports."
         ),
         new Project("Somos Acompañantes Website and Back-end", "/images/somos/1.jpg", 
         "Co-Developed a website for living assistance searching/matching. Used Aurelia for the front-end and Laravel for the back-end.",//<a href='http://somosuy.com'>somosuy.com</a>",
         [
-            new ProjectVideo("/video/somos/video-1484280234.mp4", "Somos Acompañantes", "Somos Acompañantes presentation video. Copyright: www.somosuy.com", "http://www.somosuy.com"),
             new ProjectImage("/images/somos/1.jpg"),
             new ProjectImage("/images/somos/2.jpg"),
             new ProjectImage("/images/somos/3.jpg"),
@@ -53,8 +64,16 @@ export default class Projects {
             new ProjectImage("/images/somos/8.png"),
             new ProjectImage("/images/somos/9.png"),
             new ProjectImage("/images/somos/10.png"),
+            new ProjectVideo("/video/somos/video-1484280234.mp4", "Somos Acompañantes", "Somos Acompañantes presentation video. Copyright: www.somosuy.com", "http://www.somosuy.com"),
         ],
-        null,null,"800px"
+        null,null,"800px",
+        [
+            Technologies.PHP,
+            Technologies.Javascript,
+            Technologies.Laravel,
+            Technologies.Aurelia,
+            Technologies.MySQL,
+        ]
         ),
         new Project("OpenCL Audio Equalizer", "/images/openclequalizer/main.png", 
         "Audio equalizer using OpenCL implementing twelve 1000 order FIR filters running in real-time in the GPU.",
@@ -82,7 +101,22 @@ export default class Projects {
                 "http://freemusicarchive.org/music/Dexter_Britain/Creative_Commons_Volume_2/Summers_Coming"),
         ],
         null,
-        "https://github.com/bngreen/OpenCL-Equalizer", "192px"
+        "https://github.com/bngreen/OpenCL-Equalizer", "192px",
+        [
+            Technologies.OpenCL,
+            Technologies.CSharp,
+        ]
         ),
+        new Project("Audio Player", "/images/aplayer/1.png", "Audio player developed in C# using WPF for the user interface, featuring a playlist and equalizer.", 
+        [
+            new ProjectImage("/images/aplayer/1.png"),
+            new ProjectImage("/images/aplayer/2.png"),
+        ], null, "https://github.com/bngreen/Audio-Player", "473px", [
+            Technologies.CSharp,
+            Technologies.WPF,
+            Technologies.NAudio,
+            Technologies.MediaInfo,
+        ]
+        )
     ];
 }

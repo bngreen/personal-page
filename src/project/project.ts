@@ -16,9 +16,19 @@
 */
 
 import ProjectObject from './projectobject';
+import Technology from './technologies';
 
 export default class Project {
-    constructor(public title:string, public mainImage:string, public description:string, public objects:ProjectObject[], public detailsview:string = null, public reposuri:string = null, public contentHeight:string = null){
+    constructor(public title:string, 
+                public mainImage:string, 
+                public description:string, 
+                public objects:ProjectObject[], 
+                public detailsview:string = null, 
+                public reposuri:string = null, 
+                public contentHeight:string = null,
+                public technologies : Technology[] = null,
+                public detailsDescription : string = null
+                ){
 
     }
 

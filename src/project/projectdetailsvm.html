@@ -8,8 +8,22 @@
                     <compose style.bind="contentstyle()" class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
                     <button class="gallery-control" if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
                 </div>
-            <div if.bind="project.detailsview === null" innerhtml.bind="project.description"></div>
-            <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
+            <div class="container">
+                <div class.bind="project.technologies !== null ? 'col-md-9' : ''">
+                    <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description"></div>
+                    <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
+                </div>
+                <div if.bind="project.technologies" class="col-md-3">
+                    <h2>Technologies</h2>
+                    <require from="../groupbyvalueconverter"></require>
+                    <ul repeat.for="[group, values] of project.technologies | groupBy:'category'">
+                        <h4>${values.length > 1? group.pluralName : group.name}</h4>
+                        <li repeat.for="technology of values">
+                            <div innerhtml.bind="technology.name"></div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </ai-dialog-body>
    </ai-dialog>
 </template>
