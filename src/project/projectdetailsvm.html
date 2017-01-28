@@ -4,10 +4,16 @@
             <h2>${project.title} <a if.bind="project.reposuri" href.bind='project.reposuri'><i class='fa fa-github-square' aria-hidden='true'></i></a></h2>
             <div if.bind="currentobjind != -1">
                 <div class="container gallery-container">
-                    <button class="gallery-control" if.bind="hasObjControls()" click.delegate="previous()"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
                     <compose style.bind="contentstyle()" class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
-                    <button class="gallery-control" if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+                    <a class="gallery-control gallery-control-left" if.bind="hasObjControls()" click.delegate="previous()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+                    <a class="gallery-control gallery-control-right" if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <div class="gallery-control-bottom" if.bind="hasObjControls()">
+                        <div>
+                            <i repeat.for="obj of project.objects" class="fa fa-circle" aria-hidden="true" style.bind="$index == currentobjind?'color\:#65aeed;':''" ></i>
+                        </div>
+                    </div>
                 </div>
+            </div>
             <div class="container">
                 <div class.bind="project.technologies !== null ? 'col-md-9' : ''">
                     <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description"></div>
@@ -16,12 +22,14 @@
                 <div if.bind="project.technologies" class="col-md-3">
                     <h2>Technologies</h2>
                     <require from="../groupbyvalueconverter"></require>
-                    <ul repeat.for="[group, values] of project.technologies | groupBy:'category'">
+                    <div class="row technology" repeat.for="[group, values] of project.technologies | groupBy:'category'">
                         <h4>${values.length > 1? group.pluralName : group.name}</h4>
-                        <li repeat.for="technology of values">
-                            <div innerhtml.bind="technology.name"></div> 
-                        </li>
-                    </ul>
+                        <ul>
+                            <li repeat.for="technology of values">
+                                <span innerhtml.bind="technology.name"></span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </ai-dialog-body>

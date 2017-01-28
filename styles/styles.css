@@ -190,7 +190,6 @@ div.au-stagger {
 }
 
 .grid figure {
-	border-radius: 8px;
 	position: relative;
 	float: left;
 	overflow: hidden;
@@ -337,27 +336,70 @@ figure.effect-bubba:hover p {
 	transform: translate3d(0,0,0);
 }
 
-button.gallery-control {
+.gallery-control {
+	position: absolute;
+	top: calc(50% - 35px);
 	vertical-align: -webkit-baseline-middle;
     display: inline-block;
     border: 0;
     background: transparent;
-    font-size: 40px;
+    font-size: 4em;
     /*margin: 0 10px;*/
     color: #356d9e;
 }
 
-button.gallery-control:hover {
+.gallery-control-left { 
+	left: 20px;
+}
+
+.gallery-control-right { 
+	right: 20px;
+}
+
+.gallery-control:hover {
 	color: #65aeed;
 }
 
 .gallery-content {
-	display: inline-block;
+	/*display: inline-block;*/
     vertical-align: -webkit-baseline-middle;
     width: 90%;
     margin: 15px 0px;
+    position: relative;
 }
 
 div.gallery-container{
 	text-align: center;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
+
+.gallery-control-bottom {
+	position:absolute;
+	bottom: -20px;
+	left: 50%;
+	width: 100%;
+}
+
+.gallery-control-bottom div {
+	position: relative;
+	left: -50%;
+	color: #356d9e;
+}
+
+.gallery-control-bottom i {
+	padding-right: 2px;
+	padding-left: 2px;
+}
+
+.technology ul { 
+	padding: 0;
+	list-style-type: none;
+}
+
+.technology li {
+	float:left;
+	padding-left: 20px;
+}
+
