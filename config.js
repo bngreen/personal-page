@@ -227,6 +227,7 @@ System.config({
     ],
     "mainpage.js": [
       "./page-config",
+      "jquery",
       "../styles/style.css!"
     ],
     "navbar.js": [

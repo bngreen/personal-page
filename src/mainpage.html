@@ -16,7 +16,7 @@
     <require from="./navbar"></require>
     <navbar></navbar>
     <div repeat.for="section of sections">
-        <section id.bind="section.section">
+        <section id.bind="section.section" class="page-section">
             <h2 class='section-title' if.bind="section.title">${section.title}</h2>
             <compose if.bind="section.view" view="${section.view}.html" model.bind="section.data" containerless></compose>
             <compose if.bind="section.viewmodel" view-model="${section.viewmodel}" model.bind="section.data" containerless></compose>

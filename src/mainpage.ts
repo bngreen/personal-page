@@ -20,6 +20,8 @@ import PageConfig from './page-config';
 import pagesection from './pagesection';
 import '../styles/style.css!';
 
+import * as $ from 'jquery';
+
 export class mainpage {
     public pageconfig = PageConfig;
     public sections : pagesection[] = PageConfig.PageSections;
@@ -34,5 +36,28 @@ export class mainpage {
         $( window ).resize( x=>{
             this.updateCoverHeight();
         });
+        this.smoothScrollInit();
     }
+
+    private smoothScrollInit() {
+        //modified from: https://css-tricks.com/snippets/jquery/smooth-scrolling/
+        //var speed = 1;
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    var offset = target.offset().top + $('.page-host').scrollTop();
+                    //var distance = Math.abs(target.offset().top - $('.page-host').scrollTop());
+                    if (target.length) {
+                        $('.page-host').animate({
+                            scrollTop: offset
+                        }, 1000);//distance/speed);
+                        return true;
+                    }
+                }
+            });
+        });
+    }
+
 }

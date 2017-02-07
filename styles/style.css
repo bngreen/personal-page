@@ -362,3 +362,7 @@ div.gallery-container{
 .cover-down:hover {
 	color: white;
 }
+
+section.page-section {
+	padding-top: 50px;
+}
