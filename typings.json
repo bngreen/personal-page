@@ -26,7 +26,9 @@
     "aurelia-templating-router": "github:aurelia/templating-router"
   },
   "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170123093700",
     "url": "github:aurelia/fetch-client/doc/url.d.ts#bbe0777ef710d889a05759a65fa2c9c3865fc618",
+    "waypoints": "github:dominikbulaj/WaypointsTypings/src/waypoints.d.ts",
     "whatwg-fetch": "registry:dt/whatwg-fetch#0.0.0+20160524142046"
   }
 }

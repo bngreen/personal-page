@@ -22,8 +22,7 @@ import ProjectVideo from "./projectvideo";
 import Technologies from './technologies';
 
 export default class Projects {
-    public static projects : Project[] = [
-        new Project("Diesel Engine Supervisory System", "/images/dyna/3.png", 
+    private static dyna : Project = new Project("Diesel Engine Supervisory System", "/images/dyna/3.png", 
         "The software monitored a hydraulic dynamometer and various other sensors relating to engine performance.",
         [
             new ProjectImage("/images/dyna/3.png"),
@@ -50,9 +49,10 @@ export default class Projects {
             Technologies.LPC2378,
         ],
         "The software monitored a hydraulic dynamometer and various other sensors relating to engine performance. After capture, the readings were stored in a database for later export and analysis. In addition to the software, I developed the prototype hardware to interface with the dynamometer and thermometer as a proof of concept. C# was used as the main language for software development, WPF was used for the interface. NHibernate was used for database access and RS232 was used for the hardware communication protocol. In order to generate reports, I wrote a custom parser with F#, FsLex and FsYacc. The report generator supported a wide variety of user-supplied expressions to be used in reports."
-        ),
-        new Project("Somos Acompañantes Website and Back-end", "/images/somos/1.jpg", 
-        "Co-Developed a website for living assistance searching/matching. Used Aurelia for the front-end and Laravel for the back-end.",//<a href='http://somosuy.com'>somosuy.com</a>",
+        );
+
+    private static somos = new Project("Somos Acompañantes Website and Back-end", "/images/somos/1.jpg", 
+        "Co-Developed a website for living assistance searching/matching.",//<a href='http://somosuy.com'>somosuy.com</a>",
         [
             new ProjectImage("/images/somos/1.jpg"),
             new ProjectImage("/images/somos/2.jpg"),
@@ -73,9 +73,10 @@ export default class Projects {
             Technologies.Laravel,
             Technologies.Aurelia,
             Technologies.MySQL,
-        ]
-        ),
-        new Project("OpenCL Audio Equalizer", "/images/openclequalizer/main.png", 
+        ], "Co-Developed a website for living assistance searching/matching. Used Aurelia for the front-end and Laravel for the back-end."
+        );
+
+    private static ocla = new Project("OpenCL Audio Equalizer", "/images/openclequalizer/main.png", 
         "Audio equalizer using OpenCL implementing twelve 1000 order FIR filters running in real-time in the GPU.",
          [
             new ProjectImage("/images/openclequalizer/1.png"),
@@ -106,8 +107,9 @@ export default class Projects {
             Technologies.OpenCL,
             Technologies.CSharp,
         ]
-        ),
-        new Project("Audio Player", "/images/aplayer/1.png", "Audio player developed in C# using WPF for the user interface, featuring a playlist and equalizer.", 
+        );
+    
+    private static aplayer = new Project("Audio Player", "/images/aplayer/1.png", "Audio player developed in C# using WPF for the user interface, featuring a playlist and equalizer.", 
         [
             new ProjectImage("/images/aplayer/1.png"),
             new ProjectImage("/images/aplayer/2.png"),
@@ -116,7 +118,13 @@ export default class Projects {
             Technologies.WPF,
             Technologies.NAudio,
             Technologies.MediaInfo,
-        ]
-        )
+        ],"Audio player developed in C# using WPF for the user interface, featuring a playlist and equalizer. The audio equalization is performed by applying the Fast Fourier Transform (FFT) to the audio samples. A user-selected gain is applied to each band, afterwards the inverse FFT is performed. "
+        );
+
+    public static projects : Project[] = [
+        Projects.somos,
+        Projects.ocla,
+        Projects.dyna,
+        Projects.aplayer,
     ];
 }

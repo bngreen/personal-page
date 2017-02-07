@@ -1,0 +1,29 @@
+<template>
+    <div id='widthReferenceElement' style='height: 0;padding:0;margin:0;width:100%;'></div>
+    <div id="sticky-wrapper" class="sticky-wrapper" >
+        <div class="container">
+            <nav class="navbar navbar-default custom" role="navigation">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#home">
+                        <span>${title}</span>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="custom-collapse">
+                    <ul class="nav navbar-nav navbar-right custom">
+                        <li repeat.for="item of items" >
+                            <a href="#${item.section}" if.bind='item.title' class="${item.isactive ? 'active' : ''}">${item.title}</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div if.bind='isfixed' class="sticky-wrapper"></div>
+</template>

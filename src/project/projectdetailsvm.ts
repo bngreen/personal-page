@@ -22,9 +22,10 @@ import {DialogController} from 'aurelia-dialog';
 
 @inject(DialogController)
 export class projectdetailsvm {
-
+    public controller;
     constructor(controller) {
         controller.settings.lock = false;
+        this.controller = controller;
     }
 
     @bindable public project : Project;

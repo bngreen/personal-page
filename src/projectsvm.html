@@ -1,0 +1,10 @@
+<template>
+    <require from="./project/projectvm"></require>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 ng-isolate-scope" repeat.for="project of projects">
+                <projectvm project.bind="project"></projectvm>
+            </div>
+        </div>
+    </div>
+</template>

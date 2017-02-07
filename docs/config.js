@@ -30,10 +30,12 @@ System.config({
     "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0",
     "bluebird": "npm:bluebird@3.4.1",
     "bootstrap": "github:twbs/bootstrap@3.3.7",
+    "css": "github:systemjs/plugin-css@0.1.32",
     "fetch": "github:github/fetch@1.0.0",
     "font-awesome": "npm:font-awesome@4.6.3",
-    "jquery": "npm:jquery@2.2.4",
+    "jquery": "npm:jquery@3.1.1",
     "text": "github:systemjs/plugin-text@0.0.8",
+    "waypoints": "github:summerisgone/waypoints@4.0.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -50,7 +52,7 @@ System.config({
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
     "github:twbs/bootstrap@3.3.7": {
-      "jquery": "npm:jquery@2.2.4"
+      "jquery": "npm:jquery@3.1.1"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -195,7 +197,7 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:font-awesome@4.6.3": {
-      "css": "github:systemjs/plugin-css@0.1.31"
+      "css": "github:systemjs/plugin-css@0.1.32"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
@@ -213,17 +215,77 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
+  depCache: {
+    "app.js": [
+      "./page-config"
+    ],
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "mainpage.js": [
+      "./page-config",
+      "../styles/style.css!"
+    ],
+    "navbar.js": [
+      "./page-config",
+      "./pagesection",
+      "aurelia-framework",
+      "jquery",
+      "waypoints"
+    ],
+    "page-config.js": [
+      "./pagesection"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo",
+      "./technologies"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "projectsvm.js": [
+      "./project/projects"
+    ]
+  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
       "app.js",
       "blur-image.js",
-      "child-router.html!github:systemjs/plugin-text@0.0.8.js",
-      "child-router.js",
       "groupbyvalueconverter.js",
       "main.js",
+      "mainpage.html!github:systemjs/plugin-text@0.0.8.js",
+      "mainpage.js",
       "nav-bar.html!github:systemjs/plugin-text@0.0.8.js",
-      "project/dynaview.html!github:systemjs/plugin-text@0.0.8.js",
+      "navbar.html!github:systemjs/plugin-text@0.0.8.js",
+      "navbar.js",
+      "page-config.js",
+      "pagesection.js",
       "project/project.js",
       "project/projectaudio.js",
       "project/projectaudiovm.html!github:systemjs/plugin-text@0.0.8.js",
@@ -241,14 +303,16 @@ System.config({
       "project/projectvm.html!github:systemjs/plugin-text@0.0.8.js",
       "project/projectvm.js",
       "project/technologies.js",
-      "users.html!github:systemjs/plugin-text@0.0.8.js",
-      "users.js",
-      "welcome.html!github:systemjs/plugin-text@0.0.8.js",
-      "welcome.js"
+      "projectsvm.html!github:systemjs/plugin-text@0.0.8.js",
+      "projectsvm.js"
     ],
     "aurelia.js": [
       "github:github/fetch@1.0.0.js",
       "github:github/fetch@1.0.0/fetch.js",
+      "github:summerisgone/waypoints@4.0.0.js",
+      "github:summerisgone/waypoints@4.0.0/lib/noframework.waypoints.js",
+      "github:systemjs/plugin-css@0.1.32.js",
+      "github:systemjs/plugin-css@0.1.32/css.js",
       "github:twbs/bootstrap@3.3.7.js",
       "github:twbs/bootstrap@3.3.7/css/bootstrap.css!github:systemjs/plugin-text@0.0.8.js",
       "github:twbs/bootstrap@3.3.7/js/bootstrap.js",
@@ -350,53 +414,8 @@ System.config({
       "npm:aurelia-templating-router@1.0.0/router-view.js",
       "npm:aurelia-templating@1.2.0.js",
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
-      "npm:jquery@2.2.4.js",
-      "npm:jquery@2.2.4/dist/jquery.js"
-    ]
-  },
-  depCache: {
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo",
-      "./technologies"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "users.js": [
-      "aurelia-framework",
-      "aurelia-fetch-client",
-      "fetch"
-    ],
-    "welcome.js": [
-      "./project/projects"
+      "npm:jquery@3.1.1.js",
+      "npm:jquery@3.1.1/dist/jquery.js"
     ]
   }
 });

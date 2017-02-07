@@ -31,7 +31,9 @@ module.exports = {
         "bootstrap/css/bootstrap.css!text",
         "fetch",
         "jquery",
-        "aurelia-dialog"
+        "aurelia-dialog",
+        "waypoints",
+        "css",
       ],
       "options": {
         "inject": true,

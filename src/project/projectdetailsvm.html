@@ -1,10 +1,11 @@
 <template>
     <ai-dialog>
-        <ai-dialog-body>
+        <ai-dialog-body style='position:relative;'>
+            <i click.delegate='controller.cancel()' class="fa fa-times fa-2x ai-dialog-close" aria-hidden="true"></i>
             <h2>${project.title} <a if.bind="project.reposuri" href.bind='project.reposuri'><i class='fa fa-github-square' aria-hidden='true'></i></a></h2>
             <div if.bind="currentobjind != -1">
                 <div class="container gallery-container">
-                    <compose style.bind="contentstyle()" class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
+                    <compose class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>
                     <a class="gallery-control gallery-control-left" if.bind="hasObjControls()" click.delegate="previous()"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
                     <a class="gallery-control gallery-control-right" if.bind="hasObjControls()" click.delegate="next()"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                     <div class="gallery-control-bottom" if.bind="hasObjControls()">
@@ -15,16 +16,16 @@
                 </div>
             </div>
             <div class="container">
-                <div class.bind="project.technologies !== null ? 'col-md-9' : ''">
-                    <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description"></div>
-                    <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
-                </div>
-                <div if.bind="project.technologies" class="col-md-3">
-                    <h2>Technologies</h2>
-                    <require from="../groupbyvalueconverter"></require>
-                    <div class="row technology" repeat.for="[group, values] of project.technologies | groupBy:'category'">
+                <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description"></div>
+                <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
+            </div>
+            <div if.bind="project.technologies" class="container">
+                <h2>Technologies</h2>
+                <require from="../groupbyvalueconverter"></require>
+                <div class="col-md-3 technology" repeat.for="[group, values] of project.technologies | groupBy:'category'">
+                    <div class="container">
                         <h4>${values.length > 1? group.pluralName : group.name}</h4>
-                        <ul>
+                        <ul class="list-inline">
                             <li repeat.for="technology of values">
                                 <span innerhtml.bind="technology.name"></span>
                             </li>
