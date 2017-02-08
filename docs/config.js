@@ -18,7 +18,7 @@ System.config({
     "aurelia-bootstrapper": "npm:aurelia-bootstrapper@1.0.0",
     "aurelia-dialog": "npm:aurelia-dialog@1.0.0-beta.3.0.1",
     "aurelia-fetch-client": "npm:aurelia-fetch-client@1.0.1",
-    "aurelia-framework": "npm:aurelia-framework@1.0.6",
+    "aurelia-framework": "npm:aurelia-framework@1.0.8",
     "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0",
     "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0",
     "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0",
@@ -73,7 +73,7 @@ System.config({
     },
     "npm:aurelia-bootstrapper@1.0.0": {
       "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
-      "aurelia-framework": "npm:aurelia-framework@1.0.6",
+      "aurelia-framework": "npm:aurelia-framework@1.0.8",
       "aurelia-history": "npm:aurelia-history@1.0.0",
       "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0",
       "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0",
@@ -87,12 +87,12 @@ System.config({
       "aurelia-templating-resources": "npm:aurelia-templating-resources@1.1.1",
       "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0"
     },
-    "npm:aurelia-dependency-injection@1.2.1": {
+    "npm:aurelia-dependency-injection@1.3.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
       "aurelia-pal": "npm:aurelia-pal@1.2.0"
     },
     "npm:aurelia-dialog@1.0.0-beta.3.0.1": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
       "aurelia-pal": "npm:aurelia-pal@1.2.0",
       "aurelia-templating": "npm:aurelia-templating@1.2.0"
@@ -100,9 +100,9 @@ System.config({
     "npm:aurelia-event-aggregator@1.0.0": {
       "aurelia-logging": "npm:aurelia-logging@1.2.0"
     },
-    "npm:aurelia-framework@1.0.6": {
+    "npm:aurelia-framework@1.0.8": {
       "aurelia-binding": "npm:aurelia-binding@1.1.1",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
@@ -140,7 +140,7 @@ System.config({
       "aurelia-path": "npm:aurelia-path@1.1.1"
     },
     "npm:aurelia-router@1.0.6": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
       "aurelia-history": "npm:aurelia-history@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
@@ -157,7 +157,7 @@ System.config({
     },
     "npm:aurelia-templating-resources@1.1.1": {
       "aurelia-binding": "npm:aurelia-binding@1.1.1",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
@@ -167,7 +167,7 @@ System.config({
       "aurelia-templating": "npm:aurelia-templating@1.2.0"
     },
     "npm:aurelia-templating-router@1.0.0": {
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
       "aurelia-pal": "npm:aurelia-pal@1.2.0",
@@ -177,7 +177,7 @@ System.config({
     },
     "npm:aurelia-templating@1.2.0": {
       "aurelia-binding": "npm:aurelia-binding@1.1.1",
-      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.1",
+      "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.3",
@@ -215,74 +215,18 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
-  depCache: {
-    "app.js": [
-      "./page-config"
-    ],
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "mainpage.js": [
-      "./page-config",
-      "jquery",
-      "../styles/style.css!"
-    ],
-    "navbar.js": [
-      "./page-config",
-      "./pagesection",
-      "aurelia-framework",
-      "jquery",
-      "waypoints"
-    ],
-    "page-config.js": [
-      "./pagesection"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo",
-      "./technologies"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "projectsvm.js": [
-      "./project/projects"
-    ]
-  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
       "app.js",
       "blur-image.js",
+      "course.js",
+      "defaultvm.js",
+      "educationview.html!github:systemjs/plugin-text@0.0.8.js",
       "groupbyvalueconverter.js",
       "main.js",
       "mainpage.html!github:systemjs/plugin-text@0.0.8.js",
       "mainpage.js",
-      "nav-bar.html!github:systemjs/plugin-text@0.0.8.js",
       "navbar.html!github:systemjs/plugin-text@0.0.8.js",
       "navbar.js",
       "page-config.js",
@@ -323,8 +267,8 @@ System.config({
       "npm:aurelia-binding@1.1.1/aurelia-binding.js",
       "npm:aurelia-bootstrapper@1.0.0.js",
       "npm:aurelia-bootstrapper@1.0.0/aurelia-bootstrapper.js",
-      "npm:aurelia-dependency-injection@1.2.1.js",
-      "npm:aurelia-dependency-injection@1.2.1/aurelia-dependency-injection.js",
+      "npm:aurelia-dependency-injection@1.3.0.js",
+      "npm:aurelia-dependency-injection@1.3.0/aurelia-dependency-injection.js",
       "npm:aurelia-dialog@1.0.0-beta.3.0.1.js",
       "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog-body.js",
       "npm:aurelia-dialog@1.0.0-beta.3.0.1/ai-dialog-footer.js",
@@ -344,8 +288,8 @@ System.config({
       "npm:aurelia-event-aggregator@1.0.0/aurelia-event-aggregator.js",
       "npm:aurelia-fetch-client@1.0.1.js",
       "npm:aurelia-fetch-client@1.0.1/aurelia-fetch-client.js",
-      "npm:aurelia-framework@1.0.6.js",
-      "npm:aurelia-framework@1.0.6/aurelia-framework.js",
+      "npm:aurelia-framework@1.0.8.js",
+      "npm:aurelia-framework@1.0.8/aurelia-framework.js",
       "npm:aurelia-history-browser@1.0.0.js",
       "npm:aurelia-history-browser@1.0.0/aurelia-history-browser.js",
       "npm:aurelia-history@1.0.0.js",
@@ -417,6 +361,68 @@ System.config({
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
       "npm:jquery@3.1.1.js",
       "npm:jquery@3.1.1/dist/jquery.js"
+    ]
+  },
+  depCache: {
+    "app.js": [
+      "./page-config"
+    ],
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "defaultvm.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "mainpage.js": [
+      "./page-config",
+      "jquery",
+      "../styles/style.css!"
+    ],
+    "navbar.js": [
+      "./page-config",
+      "./pagesection",
+      "aurelia-framework",
+      "jquery",
+      "waypoints"
+    ],
+    "page-config.js": [
+      "./pagesection",
+      "./course"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo",
+      "./technologies"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "projectsvm.js": [
+      "./project/projects"
     ]
   }
 });
