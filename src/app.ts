@@ -6,7 +6,10 @@ export class App {
 
   public configureRouter(config: RouterConfiguration, router: Router) {
     config.title = PageConfig.Name;
-    var routes:any[] = [{ route: ['', 'mainpage', 'home'], name: 'mainpage',      moduleId: 'mainpage',      nav: true, title: '' }];
+    var routes:any[] = [
+      { route: ['', 'mainpage', 'home'], name: 'mainpage',      moduleId: 'mainpage',      nav: true, title: '' },
+      { route: 'firebase', name: 'firebase',      moduleId: 'contact/firebasevm',      nav: false, title: 'Firebase Contacts' },
+    ];
     routes = routes.concat(
       PageConfig.PageSections.map(x=>({route: x.section, name: x.section, moduleId: 'mainpage', nav: false, title: ''}))
     );

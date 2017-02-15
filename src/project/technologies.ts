@@ -19,6 +19,8 @@ export class TechCategories {
     public static ParserGenerator = new TechCategory("Parser Generator");
     public static Lexer = new TechCategory("Lexer");
     public static Library = new TechCategory("Library", "Libraries");
+    public static Tool = new TechCategory("Tool");
+    public static HWDescriptionLanguage = new TechCategory("HW. Description Language");
     public static categories = [
         TechCategories.ProgrammingLanguage,
         TechCategories.Framework,
@@ -28,6 +30,8 @@ export class TechCategories {
         TechCategories.ParserGenerator,
         TechCategories.Lexer,
         TechCategories.Library,
+        TechCategories.Tool,
+        TechCategories.HWDescriptionLanguage,
     ];
 }
 
@@ -46,6 +50,8 @@ export default class Technologies {
     public static OpenCL = new Technology(TechCategories.Framework, "OpenCL");
     public static Aurelia = new Technology(TechCategories.Framework, "Aurelia");
     public static Laravel = new Technology(TechCategories.Framework, "Laravel");
+    public static ASPNETMVC = new Technology(TechCategories.Framework, "ASP.NET MVC");
+    public static PlayFramework = new Technology(TechCategories.Framework, "Play Framework");
 
     public static MSSQL = new Technology(TechCategories.Database, "Microsoft SQL Server");
     public static MySQL = new Technology(TechCategories.Database, "MySQL");
@@ -57,6 +63,8 @@ export default class Technologies {
 
     public static LPC2378 = new Technology(TechCategories.Microcontroller, "LPC2378");
     public static STM32F103 = new Technology(TechCategories.Microcontroller, "STM32F103");
+    public static STM32 = new Technology(TechCategories.Microcontroller, "STM32");
+    public static MSP430 = new Technology(TechCategories.Microcontroller, "MSP430");
 
     public static FsYacc = new Technology(TechCategories.ParserGenerator, "FsYacc");
 
@@ -64,6 +72,12 @@ export default class Technologies {
 
     public static NAudio = new Technology(TechCategories.Library, "NAudio");
     public static MediaInfo = new Technology(TechCategories.Library, "MediaInfo");
+
+    public static Moq = new Technology(TechCategories.Tool, "Moq");
+    public static NUnit = new Technology(TechCategories.Tool, "NUnit");
+    public static Xamarin = new Technology(TechCategories.Tool, "Xamarin");
+
+    public static VHDL = new Technology(TechCategories.HWDescriptionLanguage, "VHDL");
 
     public static technologies = [
         Technologies.CSharp,
@@ -78,6 +92,8 @@ export default class Technologies {
         Technologies.WPF,
         Technologies.OpenCL,
         Technologies.Aurelia,
+        Technologies.ASPNETMVC,
+        Technologies.PlayFramework,
 
         Technologies.MSSQL,
         Technologies.MySQL,
@@ -89,10 +105,19 @@ export default class Technologies {
 
         Technologies.LPC2378,
         Technologies.STM32F103,
+        Technologies.STM32,
+        Technologies.MSP430,
 
         Technologies.FsYacc,
 
         Technologies.FsLex,
+
+        Technologies.Moq,
+        Technologies.NUnit,
+        Technologies.Xamarin,
+
+        Technologies.VHDL,
+
     ];
 
 }

@@ -16,7 +16,7 @@
     <require from="./navbar"></require>
     <navbar></navbar>
     <div repeat.for="section of sections">
-        <section id.bind="section.section" class="page-section">
+        <section id.bind="section.section" class="page-section ${$odd?'odd':''}">
             <h2 class='section-title' if.bind="section.title">${section.title}</h2>
             <compose if.bind="section.view !== null && section.viewmodel == null" view="${section.view}.html" model.bind="section.model" containerless></compose>
             <compose if.bind="section.viewmodel !== null && section.view == null" view-model="${section.viewmodel}" model.bind="section.model" containerless></compose>
@@ -24,30 +24,4 @@
             </compose>
         </section>
     </div>
-            <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
-        <span class='row'>a</span>
 </template>

@@ -1,0 +1,51 @@
+<template>
+    <div class="container contact">
+        <div style="text-align: center;">
+            <span>${pageconfig.contactgreeting}</span>
+        </div>
+        <div class="col-sm-6">
+            <h3>Contact Information</h3>
+            <div if.bind="pageconfig.address">
+                <i class="fa fa-map-marker fa-1x"></i> ${pageconfig.address}
+            </div>
+            <div if.bind="pageconfig.phone">
+                <i class="fa fa-phone fa-1x"></i> ${pageconfig.phone}
+            </div>
+            <div if.bind="pageconfig.email">
+                <a href="mailto:${pageconfig.email}"><i class="fa fa-envelope fa-1x"></i> ${pageconfig.email}</a>
+            </div>
+            <div if.bind="pageconfig.github">
+                <a href="https://${pageconfig.github}"><i class="fa fa-github fa-1x"></i> ${pageconfig.github}</a>
+            </div>
+            <div if.bind="pageconfig.linkedin">
+                <a href="https://${pageconfig.linkedin}"><i class="fa fa-linkedin fa-1x"></i> ${pageconfig.linkedin}</a>
+            </div>
+            <div if.bind="pageconfig.twitter">
+                <a href="https://${pageconfig.twitter}"><i class="fa fa-twitter fa-1x"></i> ${pageconfig.twitter}</a>
+            </div>
+            <div if.bind="pageconfig.facebook">
+                <a href="https://${pageconfig.facebook}"><i class="fa fa-facebook fa-1x"></i> ${pageconfig.facebook}</a>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h3>Get in Touch</h3>
+            <form submit.delegate="send_contact_message()">
+                <div class="form-group">
+                    <input type="text" value.bind="name" class="form-control" placeholder="Name" >
+                </div>
+                <div class="form-group">
+                    <input type="email" value.bind="email" class="form-control" placeholder="E-mail" >
+                </div>
+                <div class="form-group">
+                    <textarea value.bind="message" class="form-control" rows="8" placeholder="Your message" ></textarea>
+                </div>
+                <div class="error_msg">
+                    <span>${status}</span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" style="padding: 12px;" class="btn-submit btn btn-primary" disabled.bind="isbusy">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

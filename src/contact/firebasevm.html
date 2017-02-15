@@ -1,0 +1,31 @@
+<template>
+    <div class="container">
+        <div if.bind="!isloggedin">
+            <h2>Log in</h2>
+            <form submit.delegate="login(user, password)">
+                <div class="form-group animate move_from_bottom_short idle" style="transition-delay: 0.07s;">
+                    <input type="email" class="form-control" value.bind="user" placeholder="E-Mail">
+                </div>
+                <div class="form-group animate move_from_bottom_short idle" style="transition-delay: 0.14s;">
+                    <input type="password" class="form-control" value.bind="password" placeholder="Password">
+                </div>
+                <div class="error_msg">
+                    <span>${login_error}</span>
+                </div>
+                <div class="form-group animate move_from_bottom_short idle" style="transition-delay: 0.14s;">
+                    <button type="submit" class="btn btn-primary">Log-In</button>
+                </div>
+            </form>
+        </div>
+        <div if.bind="isloggedin">
+            <button style="padding: 12px;" class="btn-submit btn btn-primary" click.delegate="logoff()">Log-off</button>
+        </div>
+
+        <h2>Messages</h2>
+        <div class="row" repeat.for="message of messages.items">
+            <h3>${message.name} - ${message.email}</h3>
+            <textarea value.bind="message.message" class="form-control" rows="8" readonly></textarea>
+            <button style="padding: 12px;" class="btn-submit btn btn-primary" click.delegate="deletemessage(message)">Delete</button>
+        </div>
+    </div>
+</template>

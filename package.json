@@ -80,6 +80,7 @@
       "bluebird": "npm:bluebird@3.4.1",
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "fetch": "github:github/fetch@^1.0.0",
+      "firebase": "github:firebase/firebase-bower@^3.6.9",
       "font-awesome": "npm:font-awesome@4.6.3",
       "jquery": "npm:jquery@^3.1.1",
       "text": "github:systemjs/plugin-text@^0.0.8",

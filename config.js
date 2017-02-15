@@ -32,6 +32,7 @@ System.config({
     "bootstrap": "github:twbs/bootstrap@3.3.7",
     "css": "github:systemjs/plugin-css@0.1.32",
     "fetch": "github:github/fetch@1.0.0",
+    "firebase": "github:firebase/firebase-bower@3.6.9",
     "font-awesome": "npm:font-awesome@4.6.3",
     "jquery": "npm:jquery@3.1.1",
     "text": "github:systemjs/plugin-text@0.0.8",
@@ -72,7 +73,7 @@ System.config({
       "aurelia-task-queue": "npm:aurelia-task-queue@1.1.0"
     },
     "npm:aurelia-bootstrapper@1.0.0": {
-      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
+      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.1",
       "aurelia-framework": "npm:aurelia-framework@1.0.8",
       "aurelia-history": "npm:aurelia-history@1.0.0",
       "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0",
@@ -97,7 +98,7 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.2.0",
       "aurelia-templating": "npm:aurelia-templating@1.2.0"
     },
-    "npm:aurelia-event-aggregator@1.0.0": {
+    "npm:aurelia-event-aggregator@1.0.1": {
       "aurelia-logging": "npm:aurelia-logging@1.2.0"
     },
     "npm:aurelia-framework@1.0.8": {
@@ -141,7 +142,7 @@ System.config({
     },
     "npm:aurelia-router@1.0.6": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.0",
-      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.0",
+      "aurelia-event-aggregator": "npm:aurelia-event-aggregator@1.0.1",
       "aurelia-history": "npm:aurelia-history@1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.2.0",
       "aurelia-path": "npm:aurelia-path@1.1.1",
@@ -215,11 +216,106 @@ System.config({
       "indexof": "npm:indexof@0.0.1"
     }
   },
+  depCache: {
+    "app.js": [
+      "./page-config"
+    ],
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "contact/firebasecollection.js": [
+      "firebase"
+    ],
+    "contact/firebasesink.js": [
+      "firebase"
+    ],
+    "contact/firebasevm.js": [
+      "firebase",
+      "../page-config",
+      "./firebasecollection"
+    ],
+    "contact/integromatsink.js": [
+      "jquery"
+    ],
+    "contact/zapiersink.js": [
+      "jquery"
+    ],
+    "contactvm.js": [
+      "./page-config"
+    ],
+    "defaultvm.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "mainpage.js": [
+      "./page-config",
+      "jquery",
+      "../styles/style.css!"
+    ],
+    "navbar.js": [
+      "./page-config",
+      "./pagesection",
+      "aurelia-framework",
+      "jquery",
+      "waypoints"
+    ],
+    "page-config.js": [
+      "./pagesection",
+      "./course",
+      "./project/technologies",
+      "./contact/zapiersink",
+      "./contact/integromatsink",
+      "./contact/firebasesink"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo",
+      "./technologies"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "projectsvm.js": [
+      "./project/projects"
+    ]
+  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
       "app.js",
       "blur-image.js",
+      "contact/firebasecollection.js",
+      "contact/firebasesink.js",
+      "contact/firebasevm.html!github:systemjs/plugin-text@0.0.8.js",
+      "contact/firebasevm.js",
+      "contact/icontactsink.js",
+      "contact/integromatsink.js",
+      "contact/zapiersink.js",
+      "contactvm.html!github:systemjs/plugin-text@0.0.8.js",
+      "contactvm.js",
       "course.js",
       "defaultvm.js",
       "educationview.html!github:systemjs/plugin-text@0.0.8.js",
@@ -249,9 +345,12 @@ System.config({
       "project/projectvm.js",
       "project/technologies.js",
       "projectsvm.html!github:systemjs/plugin-text@0.0.8.js",
-      "projectsvm.js"
+      "projectsvm.js",
+      "skillsview.html!github:systemjs/plugin-text@0.0.8.js"
     ],
     "aurelia.js": [
+      "github:firebase/firebase-bower@3.6.9.js",
+      "github:firebase/firebase-bower@3.6.9/firebase.js",
       "github:github/fetch@1.0.0.js",
       "github:github/fetch@1.0.0/fetch.js",
       "github:summerisgone/waypoints@4.0.0.js",
@@ -284,8 +383,8 @@ System.config({
       "npm:aurelia-dialog@1.0.0-beta.3.0.1/dialog-service.js",
       "npm:aurelia-dialog@1.0.0-beta.3.0.1/lifecycle.js",
       "npm:aurelia-dialog@1.0.0-beta.3.0.1/renderer.js",
-      "npm:aurelia-event-aggregator@1.0.0.js",
-      "npm:aurelia-event-aggregator@1.0.0/aurelia-event-aggregator.js",
+      "npm:aurelia-event-aggregator@1.0.1.js",
+      "npm:aurelia-event-aggregator@1.0.1/aurelia-event-aggregator.js",
       "npm:aurelia-fetch-client@1.0.1.js",
       "npm:aurelia-fetch-client@1.0.1/aurelia-fetch-client.js",
       "npm:aurelia-framework@1.0.8.js",
@@ -361,68 +460,6 @@ System.config({
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
       "npm:jquery@3.1.1.js",
       "npm:jquery@3.1.1/dist/jquery.js"
-    ]
-  },
-  depCache: {
-    "app.js": [
-      "./page-config"
-    ],
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "defaultvm.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "mainpage.js": [
-      "./page-config",
-      "jquery",
-      "../styles/style.css!"
-    ],
-    "navbar.js": [
-      "./page-config",
-      "./pagesection",
-      "aurelia-framework",
-      "jquery",
-      "waypoints"
-    ],
-    "page-config.js": [
-      "./pagesection",
-      "./course"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo",
-      "./technologies"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "projectsvm.js": [
-      "./project/projects"
     ]
   }
 });

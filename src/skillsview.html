@@ -1,0 +1,17 @@
+<template>
+    <div class="container">
+        <require from="./groupbyvalueconverter"></require>
+        <div class="skill" repeat.for="[group, values] of model.skills | groupBy:'category'">
+            <div class="row">
+                <h4>${values.length > 1? group.pluralName : group.name}</h4>
+                <div class="col-md-3" repeat.for="skill of values">
+                    <ul>
+                        <li>
+                            <span innerhtml.bind="skill.name"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

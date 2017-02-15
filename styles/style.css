@@ -365,4 +365,30 @@ div.gallery-container{
 
 section.page-section {
 	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+section.page-section.odd {
+	background: #f5f5f5;
+}
+
+div.skill {
+	padding-bottom: 15px;
+	padding-top: 15px; 
+	border-bottom: 1px solid #f5f5f5;
+}
+
+section.page-section.odd div.skill {
+	border-bottom: 1px solid #ebebeb;
+}
+
+div.contact div {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.error_msg {
+	color: #a94442;
 }

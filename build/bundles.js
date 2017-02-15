@@ -4,6 +4,7 @@ module.exports = {
       "includes": [
         "[**/*.js]",
         "**/*.html!text",
+        "**/contact/*.html!text",
         "**/*.css!text"
       ],
       "options": {
@@ -34,6 +35,7 @@ module.exports = {
         "aurelia-dialog",
         "waypoints",
         "css",
+        "firebase",
       ],
       "options": {
         "inject": true,
