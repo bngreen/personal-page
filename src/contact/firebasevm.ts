@@ -44,6 +44,10 @@ export class firebasevm {
         this.messages = new FirebaseCollection("messages", "timestamp", true);
     }
 
+    getDate(timestamp) {
+        return new Date(timestamp);
+    }
+
     logoff(){
         firebase.auth().signOut();
         this.messages = null;

@@ -83,6 +83,7 @@
       "firebase": "github:firebase/firebase-bower@^3.6.9",
       "font-awesome": "npm:font-awesome@4.6.3",
       "jquery": "npm:jquery@^3.1.1",
+      "showdown": "npm:showdown@^1.6.4",
       "text": "github:systemjs/plugin-text@^0.0.8",
       "waypoints": "github:summerisgone/waypoints@^4.0.0"
     },

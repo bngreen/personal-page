@@ -24,6 +24,7 @@
         <h2>Messages</h2>
         <div class="row" repeat.for="message of messages.items">
             <h3>${message.name} - ${message.email}</h3>
+            <h4>Sent on: ${getDate(message.timestamp)}</h4>
             <textarea value.bind="message.message" class="form-control" rows="8" readonly></textarea>
             <button style="padding: 12px;" class="btn-submit btn btn-primary" click.delegate="deletemessage(message)">Delete</button>
         </div>

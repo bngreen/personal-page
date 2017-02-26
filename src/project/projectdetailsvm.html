@@ -16,7 +16,8 @@
                 </div>
             </div>
             <div class="container">
-                <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description"></div>
+                <require from="../markdownvalueconverter"></require>
+                <div if.bind="project.detailsview === null" innerhtml.bind="project.detailsDescription ? project.detailsDescription : project.description | markdown"></div>
                 <compose if.bind="project.detailsview !== null" view.bind="project.detailsview"></compose>
             </div>
             <div if.bind="project.technologies" class="container">

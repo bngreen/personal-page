@@ -20,14 +20,14 @@ import * as $ from 'jquery';
 
 export default class IntegromatSink implements IContactSink {
 
-    public corsProxy = "http://cors-anywhere.herokuapp.com/";
+    //public corsProxy = "http://cors-anywhere.herokuapp.com/";
 
     constructor(public webhookurl:string){}
 
     public send(name: String, email: String, message: String) : Promise<boolean> {
         return new Promise((resolve, reject) => {
             $.ajax({
-                url:this.corsProxy+this.webhookurl,
+                url:this.webhookurl,
                 data:{name:name, email:email, message:message},
                 method: "GET",
             }).done(r=>{

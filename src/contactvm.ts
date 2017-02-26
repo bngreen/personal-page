@@ -19,9 +19,9 @@ import PageConfig from './page-config';
 
 export class contactvm {
     public pageconfig = PageConfig;
-    public name:string="test";
-    public email:string="test@test.com";
-    public message:string="foo";
+    public name:string;
+    public email:string;
+    public message:string;
     public status:string;
     public isbusy = false;
     send_contact_message(){

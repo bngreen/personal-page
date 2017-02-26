@@ -36,6 +36,7 @@ module.exports = {
         "waypoints",
         "css",
         "firebase",
+        "showdown",
       ],
       "options": {
         "inject": true,
