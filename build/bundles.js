@@ -37,6 +37,7 @@ module.exports = {
         "css",
         "firebase",
         "showdown",
+        "github-fork-ribbon-css/gh-fork-ribbon.css!",
       ],
       "options": {
         "inject": true,

@@ -34,6 +34,7 @@ System.config({
     "fetch": "github:github/fetch@1.0.0",
     "firebase": "github:firebase/firebase-bower@3.6.9",
     "font-awesome": "npm:font-awesome@4.6.3",
+    "github-fork-ribbon-css": "npm:github-fork-ribbon-css@0.2.1",
     "jquery": "npm:jquery@3.1.1",
     "showdown": "npm:showdown@1.6.4",
     "text": "github:systemjs/plugin-text@0.0.8",
@@ -438,6 +439,96 @@ System.config({
       "yargs-parser": "npm:yargs-parser@4.2.1"
     }
   },
+  depCache: {
+    "app.js": [
+      "./page-config"
+    ],
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "contact/firebasecollection.js": [
+      "firebase"
+    ],
+    "contact/firebasesink.js": [
+      "firebase"
+    ],
+    "contact/firebasevm.js": [
+      "firebase",
+      "../page-config",
+      "./firebasecollection"
+    ],
+    "contact/integromatsink.js": [
+      "jquery"
+    ],
+    "contact/zapiersink.js": [
+      "jquery"
+    ],
+    "contactvm.js": [
+      "./page-config"
+    ],
+    "defaultvm.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "mainpage.js": [
+      "./page-config",
+      "jquery",
+      "../styles/style.css!"
+    ],
+    "markdownvalueconverter.js": [
+      "showdown"
+    ],
+    "navbar.js": [
+      "./page-config",
+      "./pagesection",
+      "aurelia-framework",
+      "jquery",
+      "waypoints"
+    ],
+    "page-config.js": [
+      "./pagesection",
+      "./course",
+      "./project/technologies",
+      "./contact/zapiersink",
+      "./contact/integromatsink",
+      "./contact/firebasesink"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "github-fork-ribbon-css/gh-fork-ribbon.css!"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo",
+      "./technologies"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "projectsvm.js": [
+      "./project/projects"
+    ]
+  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
@@ -597,101 +688,13 @@ System.config({
       "npm:aurelia-templating-router@1.0.0/router-view.js",
       "npm:aurelia-templating@1.2.0.js",
       "npm:aurelia-templating@1.2.0/aurelia-templating.js",
+      "npm:github-fork-ribbon-css@0.2.1/gh-fork-ribbon.css!github:systemjs/plugin-css@0.1.32.js",
       "npm:jquery@3.1.1.js",
       "npm:jquery@3.1.1/dist/jquery.js",
       "npm:process@0.11.9.js",
       "npm:process@0.11.9/browser.js",
       "npm:showdown@1.6.4.js",
       "npm:showdown@1.6.4/dist/showdown.js"
-    ]
-  },
-  depCache: {
-    "app.js": [
-      "./page-config"
-    ],
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "contact/firebasecollection.js": [
-      "firebase"
-    ],
-    "contact/firebasesink.js": [
-      "firebase"
-    ],
-    "contact/firebasevm.js": [
-      "firebase",
-      "../page-config",
-      "./firebasecollection"
-    ],
-    "contact/integromatsink.js": [
-      "jquery"
-    ],
-    "contact/zapiersink.js": [
-      "jquery"
-    ],
-    "contactvm.js": [
-      "./page-config"
-    ],
-    "defaultvm.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "mainpage.js": [
-      "./page-config",
-      "jquery",
-      "../styles/style.css!"
-    ],
-    "markdownvalueconverter.js": [
-      "showdown"
-    ],
-    "navbar.js": [
-      "./page-config",
-      "./pagesection",
-      "aurelia-framework",
-      "jquery",
-      "waypoints"
-    ],
-    "page-config.js": [
-      "./pagesection",
-      "./course",
-      "./project/technologies",
-      "./contact/zapiersink",
-      "./contact/integromatsink",
-      "./contact/firebasesink"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo",
-      "./technologies"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "projectsvm.js": [
-      "./project/projects"
     ]
   }
 });

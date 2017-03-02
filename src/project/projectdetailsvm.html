@@ -1,8 +1,9 @@
 <template>
     <ai-dialog>
         <ai-dialog-body style='position:relative;'>
+            <a class="github-fork-ribbon right-top" title="Fork me on GitHub" if.bind="project.reposuri" href.bind='project.reposuri'>Fork me on GitHub</a>
             <i click.delegate='controller.cancel()' class="fa fa-times fa-2x ai-dialog-close" aria-hidden="true"></i>
-            <h2>${project.title} <a if.bind="project.reposuri" href.bind='project.reposuri'><i class='fa fa-github-square' aria-hidden='true'></i></a></h2>
+            <h2>${project.title}</h2>
             <div if.bind="currentobjind != -1">
                 <div class="container gallery-container">
                     <compose class="gallery-content" view-model="${project.objects[currentobjind].view}" model.bind="project.objects[currentobjind]"></compose>

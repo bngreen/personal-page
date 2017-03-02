@@ -82,6 +82,7 @@
       "fetch": "github:github/fetch@^1.0.0",
       "firebase": "github:firebase/firebase-bower@^3.6.9",
       "font-awesome": "npm:font-awesome@4.6.3",
+      "github-fork-ribbon-css": "npm:github-fork-ribbon-css@^0.2.1",
       "jquery": "npm:jquery@^3.1.1",
       "showdown": "npm:showdown@^1.6.4",
       "text": "github:systemjs/plugin-text@^0.0.8",

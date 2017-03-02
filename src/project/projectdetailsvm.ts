@@ -20,6 +20,8 @@ import ProjectObject from "./projectobject";
 import {bindable, inject} from "aurelia-framework";
 import {DialogController} from 'aurelia-dialog';
 
+import 'github-fork-ribbon-css/gh-fork-ribbon.css!';
+
 @inject(DialogController)
 export class projectdetailsvm {
     public controller;
