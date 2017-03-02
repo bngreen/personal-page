@@ -392,3 +392,12 @@ div.contact div {
 .error_msg {
 	color: #a94442;
 }
+
+footer {
+	color:white;
+	background-color: black;
+	width:100%;
+	text-align: center;
+	padding:20px;
+	font-size: 14px;
+}

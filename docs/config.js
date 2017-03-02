@@ -438,95 +438,6 @@ System.config({
       "yargs-parser": "npm:yargs-parser@4.2.1"
     }
   },
-  depCache: {
-    "app.js": [
-      "./page-config"
-    ],
-    "blur-image.js": [
-      "aurelia-framework"
-    ],
-    "contact/firebasecollection.js": [
-      "firebase"
-    ],
-    "contact/firebasesink.js": [
-      "firebase"
-    ],
-    "contact/firebasevm.js": [
-      "firebase",
-      "../page-config",
-      "./firebasecollection"
-    ],
-    "contact/integromatsink.js": [
-      "jquery"
-    ],
-    "contact/zapiersink.js": [
-      "jquery"
-    ],
-    "contactvm.js": [
-      "./page-config"
-    ],
-    "defaultvm.js": [
-      "aurelia-framework"
-    ],
-    "main.js": [
-      "bootstrap"
-    ],
-    "mainpage.js": [
-      "./page-config",
-      "jquery",
-      "../styles/style.css!"
-    ],
-    "markdownvalueconverter.js": [
-      "showdown"
-    ],
-    "navbar.js": [
-      "./page-config",
-      "./pagesection",
-      "aurelia-framework",
-      "jquery",
-      "waypoints"
-    ],
-    "page-config.js": [
-      "./pagesection",
-      "./course",
-      "./project/technologies",
-      "./contact/zapiersink",
-      "./contact/integromatsink",
-      "./contact/firebasesink"
-    ],
-    "project/projectaudiovm.js": [
-      "aurelia-framework",
-      "./projectaudio"
-    ],
-    "project/projectdetailsvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog"
-    ],
-    "project/projectimagevm.js": [
-      "aurelia-framework"
-    ],
-    "project/projects.js": [
-      "./project",
-      "./projectaudio",
-      "./projectimage",
-      "./projectvideo",
-      "./technologies"
-    ],
-    "project/projectvideovm.js": [
-      "aurelia-framework",
-      "./projectvideo"
-    ],
-    "project/projectvm.js": [
-      "./project",
-      "aurelia-framework",
-      "aurelia-dialog",
-      "./projectdetailsvm"
-    ],
-    "projectsvm.js": [
-      "./project/projects"
-    ]
-  },
   bundles: {
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.8.js",
@@ -692,6 +603,95 @@ System.config({
       "npm:process@0.11.9/browser.js",
       "npm:showdown@1.6.4.js",
       "npm:showdown@1.6.4/dist/showdown.js"
+    ]
+  },
+  depCache: {
+    "app.js": [
+      "./page-config"
+    ],
+    "blur-image.js": [
+      "aurelia-framework"
+    ],
+    "contact/firebasecollection.js": [
+      "firebase"
+    ],
+    "contact/firebasesink.js": [
+      "firebase"
+    ],
+    "contact/firebasevm.js": [
+      "firebase",
+      "../page-config",
+      "./firebasecollection"
+    ],
+    "contact/integromatsink.js": [
+      "jquery"
+    ],
+    "contact/zapiersink.js": [
+      "jquery"
+    ],
+    "contactvm.js": [
+      "./page-config"
+    ],
+    "defaultvm.js": [
+      "aurelia-framework"
+    ],
+    "main.js": [
+      "bootstrap"
+    ],
+    "mainpage.js": [
+      "./page-config",
+      "jquery",
+      "../styles/style.css!"
+    ],
+    "markdownvalueconverter.js": [
+      "showdown"
+    ],
+    "navbar.js": [
+      "./page-config",
+      "./pagesection",
+      "aurelia-framework",
+      "jquery",
+      "waypoints"
+    ],
+    "page-config.js": [
+      "./pagesection",
+      "./course",
+      "./project/technologies",
+      "./contact/zapiersink",
+      "./contact/integromatsink",
+      "./contact/firebasesink"
+    ],
+    "project/projectaudiovm.js": [
+      "aurelia-framework",
+      "./projectaudio"
+    ],
+    "project/projectdetailsvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog"
+    ],
+    "project/projectimagevm.js": [
+      "aurelia-framework"
+    ],
+    "project/projects.js": [
+      "./project",
+      "./projectaudio",
+      "./projectimage",
+      "./projectvideo",
+      "./technologies"
+    ],
+    "project/projectvideovm.js": [
+      "aurelia-framework",
+      "./projectvideo"
+    ],
+    "project/projectvm.js": [
+      "./project",
+      "aurelia-framework",
+      "aurelia-dialog",
+      "./projectdetailsvm"
+    ],
+    "projectsvm.js": [
+      "./project/projects"
     ]
   }
 });
