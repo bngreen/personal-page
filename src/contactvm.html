@@ -31,13 +31,13 @@
             <h3>Get in Touch</h3>
             <form submit.delegate="send_contact_message()">
                 <div class="form-group">
-                    <input type="text" value.bind="name" class="form-control" placeholder="Name" autocomplete="off">
+                    <input type="text" value.bind="name" class="form-control" placeholder="Name" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" value.bind="email" class="form-control" placeholder="E-mail" autocomplete="off">
+                    <input type="email" value.bind="email" class="form-control" placeholder="E-mail" autocomplete="off" required>
                 </div>
                 <div class="form-group">
-                    <textarea value.bind="message" class="form-control" rows="8" placeholder="Your message" autocomplete="off"></textarea>
+                    <textarea value.bind="message" class="form-control" rows="10" placeholder="Your message" autocomplete="off" required></textarea>
                 </div>
                 <div class="error_msg">
                     <span>${status}</span>

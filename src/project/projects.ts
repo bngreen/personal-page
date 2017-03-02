@@ -120,9 +120,47 @@ export default class Projects {
             Technologies.MediaInfo,
         ],"Audio player developed in C# using WPF for the user interface, featuring a playlist and equalizer. The audio equalization is performed by applying the Fast Fourier Transform (FFT) to the audio samples. A user-selected gain is applied to each band, afterwards the inverse FFT is performed. "
         );
+    
+    private static engraver = new Project("Engraver", "/images/engraver/engp.jpg", "Developed an engraver for prototyping printed circuit boards.", [
+        new ProjectImage("/images/engraver/engraver.jpg"),
+        new ProjectImage("/images/engraver/host.jpg"),
+        new ProjectImage("/images/engraver/pcb.jpg"),
+        new ProjectImage("/images/engraver/engp.jpg"),
+    ], null, "https://github.com/bngreen/Engraver-Host", "", [
+        Technologies.CSharp,
+        Technologies.CPP,
+        Technologies.WPF,
+        Technologies.STM32F103,
+        Technologies.Cairo,
+    ], 
+`###Summary###
+Developed an engraver for prototyping printed circuit boards. An UV photosensitive film is applied to the circuit board, then engraver then exposes the parts where the copper must not be removed to an UV laser. Afterwards a solution of sodium carbonate is used to remove the unexposed parts of the photosensitive film, the board is then etched by using ferric chloride. Afterwards, the exposed parts of the photosentitive film is removed by using a solution of sodium hydroxide.
+The X and Y movement is performed by two stepper motors which is controlled by a STM32F103 microcontroller. The laser is controlled by the same microcontroller and is driven by pulse width modulation. 
+###Firmware###
+The firmware of the engraver was developed using C++. Templates are used to build an abstraction layer between the ST Hardware Abstraction Layer (HAL) library and the firmware. The firmware receives commands from a Host computer by an USB port configured as a virtual COM port.
+###Host Software###
+The host software is responsible for reading the printed circuit board CAD design, converting it to commands and dispatching it to the microcontroller. The software was developed using C# and WPF for the user interface. It supports a subset of the Gerber format which is widely used in PCB design software. After reading the Gerber file, the software rasterizes the design by using the Cairo 2D graphics library. Afterwards the image is converted to commands which is dispatched to the microcontroller.
+`
+    );
+
+    private static wcet = new Project("WCET Computation Tool","/images/wcet/4.png", "Developed a tool that computes the worst-case execution time of an application running on a specific processor.",
+    [
+        new ProjectImage("/images/wcet/5.png"),
+        new ProjectImage("/images/wcet/1.png"),
+        new ProjectImage("/images/wcet/4.png"),
+        new ProjectImage("/images/wcet/3.png"),
+        new ProjectImage("/images/wcet/2.png"),
+    ],null, null, null, [
+        Technologies.CSharp,
+        Technologies.WPF,
+    ],
+`Developed a tool that computes the worst-case execution time (WCET) of an application running on the LEON3 SparcV8 microprocessor. The time in clock cycles of every instruction in the application is sampled in the target processor. Afterwards the tool builds a control flow graph (CFG) of the application, the CFG is annotated with the timing information collected during the sampling. A simple graph traversal is used to estimate the WCET of every vertex of the application, considering all possible paths. Alternatively the WCET can be computed by using the Implicit Path Enumeration Technique (IPET). While being faster than the graph traversal, it imposes more complexity to the user of the application, especially when computing the WCET of specific vertices.`
+    );
 
     public static projects : Project[] = [
+        Projects.engraver,
         Projects.somos,
+        Projects.wcet,
         Projects.ocla,
         Projects.dyna,
         Projects.aplayer,

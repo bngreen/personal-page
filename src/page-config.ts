@@ -31,7 +31,7 @@ export default class PageConfig{
     public static CoverBottom = "creating amazing computer applications";
     public static PageSections : pagesection[] = [
         new pagesection("education", "educationview", "defaultvm", "Education", {courses: [
-            new Course("Master of Science in Electrical Engineering", "Pontifical Catholic University of Rio Grande do Sul", "August 2013 – December 2015", "Thesis: Hardware-Based Approach to Support Mixed-Critical Workload Execution in Multi-core Processors"),
+            new Course("Master of Science in Electrical Engineering", "Pontifical Catholic University of Rio Grande do Sul", "August 2013 – December 2015", "Thesis: Hardware-Based Approach to Support Mixed-Critical Workload Execution in Multi-Core Processors"),
             new Course("Control and Automation Engineering", "Pontifical Catholic University of Rio Grande do Sul", "March 2007 – December 2011", "First in 2011 Class Award")
         ]}),
         new pagesection("skills", "skillsview", "defaultvm", "Skills", {skills : [

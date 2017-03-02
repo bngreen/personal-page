@@ -72,6 +72,7 @@ export default class Technologies {
 
     public static NAudio = new Technology(TechCategories.Library, "NAudio");
     public static MediaInfo = new Technology(TechCategories.Library, "MediaInfo");
+    public static Cairo = new Technology(TechCategories.Library, "Cairo");
 
     public static Moq = new Technology(TechCategories.Tool, "Moq");
     public static NUnit = new Technology(TechCategories.Tool, "NUnit");
@@ -111,6 +112,10 @@ export default class Technologies {
         Technologies.FsYacc,
 
         Technologies.FsLex,
+
+        Technologies.NAudio,
+        Technologies.MediaInfo,
+        Technologies.Cairo,
 
         Technologies.Moq,
         Technologies.NUnit,
